@@ -3,3 +3,4 @@ __pycache__/*
 results/*.txt
 results/*.json
 .DS_Store
+*.jpg
