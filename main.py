@@ -55,7 +55,11 @@ def main():
         )
     )
     max_value = max(map(lambda data_dict: data_dict[args.dependent_key], results_list))
+    last_ten = results_list[:-10]
+    average_last_ten = sum(map(lambda data_dict: data_dict[args.dependent_key], last_ten))
+    average_last_ten = average_last_ten/len(last_ten)
     print('Max value achieved:', max_value)
+    print('Average value for the last ten steps:', average_last_ten)
     plt.plot(*zip(*result_tuples))
     plt.title(args.title)
     plt.xlabel(args.x_axis)
