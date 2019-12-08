@@ -9,8 +9,7 @@ def create_argument_parser():
         description='An implementation of the Distributional Policy Optimization paper.',
     )
     parser.add_argument(
-        '-f', '--results-file', type=str, default='results/results.txt',
-        help='file to find expert actions for algorithm'
+        '-f', '--results-file', type=str, default='results/results.txt'
     )
     parser.add_argument(
         '-d', '--data-key', type=str, default='eval_rewards'
