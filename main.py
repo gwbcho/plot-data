@@ -54,6 +54,8 @@ def main():
             results_list
         )
     )
+    max_value = max(map(lambda data_dict: data_dict[args.dependent_key], results_list))
+    print('Max value achieved:', max_value)
     plt.plot(*zip(*result_tuples))
     plt.title(args.title)
     plt.xlabel(args.x_axis)
