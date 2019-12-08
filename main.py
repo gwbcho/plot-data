@@ -41,7 +41,10 @@ def create_argument_parser():
 
 def main():
     args = create_argument_parser().parse_args()
-    results_dict = json.loads(args.results_file)
+    results_string = ''
+    with open(args.results_file, 'r') as file:
+        results_string = file.read()
+    results_dict = json.loads(results_string)
     if args.data_key:
         results_list = results_dict[args.data_key]
     else:
