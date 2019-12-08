@@ -34,7 +34,7 @@ def create_argument_parser():
         '-sn', '--save-name', type=str, default='results_graph.png'
     )
     parser.add_argument(
-        '-s', '--save', type=bool, default=False, action='store_true'
+        '-s', '--save', default=False, action='store_true'
     )
     return parser
 
