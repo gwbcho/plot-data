@@ -2,3 +2,4 @@ __pycache__/*
 *.png
 results/*.txt
 results/*.json
+.DS_Store
