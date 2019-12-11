@@ -35,6 +35,9 @@ def create_argument_parser():
     parser.add_argument(
         '-s', '--save', default=False, action='store_true'
     )
+    parser.add_argument(
+        '-yl', '--y-limit', type=str, default=None, help='List of two elements indicating bottom and top values for y axis ([bottom, top]).'
+    )
     return parser
 
 
@@ -64,6 +67,9 @@ def main():
     plt.title(args.title)
     plt.xlabel(args.x_axis)
     plt.ylabel(args.y_axis)
+    if args.y_limit:
+        y_lim = json.loads(args.y_limit)
+        plt.ylim(y_lim)
     if args.save:
         plt.savefig(args.save_name)
     else:
